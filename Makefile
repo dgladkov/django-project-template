@@ -6,6 +6,7 @@ user=www-data # owner of the socket, normally should be nginx user
 instance=production # application instance
 
 clean:
+	-rm -rf build
 	-rm -rf *~*
 	-find . -name '*.pyc' -exec rm {} \;
 
