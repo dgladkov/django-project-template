@@ -12,13 +12,18 @@ Production install:
 1) easy_install virtualenv pip
 2) virtualenv env
 3) Install nginx 0.8.x and uwsgi
-4) Configure your nginx host to pass requests to uWSGI socket as described here: http://projects.unbit.it/uwsgi/wiki/RunOnNginx
+4) Configure your nginx host to pass requests to uWSGI socket as described
+   here: http://projects.unbit.it/uwsgi/wiki/RunOnNginx
 5) make uwsgi
 
 Here is more verbose example of what step 5 does:
-$ uwsgi -processes 4 --socket /tmp/project.sock --home ./env --uid www-data --module project.wsgi.production --pythonpath ./project
+$ uwsgi -processes 4 --socket /tmp/project.sock --home ./env --uid www-data \
+        --module project.wsgi.production --pythonpath ./project
 
-Normally you shouldn't just run `make uwsgi` on production server. To ensure that your site won't go off, you should run last command using supervisor, such as supervisord, upstart, daemontools and others. You can override `processes`, `user` and `instance` options as well.
+Normally you shouldn't just run `make uwsgi` on production server. To ensure
+that your site won't go off, you should run last command using supervisor, such
+as supervisord, upstart, daemontools and others. You can override `processes`,
+`user` and `instance` options as well.
 
 Example of command that may be supervised:
 $ make -C ~/Workspace/django-project-template -e user=dgl processes=1 instance=staging uwsgi
