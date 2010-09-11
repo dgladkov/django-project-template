@@ -1,0 +1,10 @@
+Example project to revisit Django project structure
+
+Core ideas:
+ * Apps placed in separate module.
+ * Settings module with settings for each setup. No more settings_local!
+ * Simple Makefile for routine tasks.
+ * Base template with suggested block names.
+ * Easy uWSGI setup
+
+Read INSTALL for more detailed documentation

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>project - {% block title %}{% endblock %}</title>
+	{% block extra_head %}{% endblock %}
+</head>
+<body>
+{% block body %}
+	<div class="header">
+		{% block header %}{% endblock %}
+	</div>
+	<div class="menu">
+		{% block menu %}{% endblock %}
+	</div>
+	<div class="content">
+		{% block content %}{% endblock %}
+	</div>
+	<div class="footer">
+		{% block footer %}{% endblock %}
+	</div>
+{% endblock %}
+</body>
+</html>
