@@ -5,6 +5,6 @@ Core ideas:
  * Settings module with settings for each setup. No more settings_local!
  * Simple Makefile for routine tasks.
  * Base template with suggested block names.
- * Easy uWSGI setup
+ * Easy uWSGI setup.
 
 Read INSTALL for more detailed documentation

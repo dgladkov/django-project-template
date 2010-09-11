@@ -1,22 +1,26 @@
 Development install:
 
-1) sudo easy_install virtualenv pip
+1) sudo easy_install virtualenv
 2) virtualenv env
 3) source env/bin/activate
-3) pip install -U -r project/requirements.txt
-4) make syncdb run
+4) easy_install pip
+5) pip install -U -r project/requirements.txt
+6) make syncdb run
 
 
 Production install:
 
-1) easy_install virtualenv pip
+1) easy_install virtualenv
 2) virtualenv env
-3) Install nginx 0.8.x and uwsgi
-4) Configure your nginx host to pass requests to uWSGI socket as described
+3) source env/bin/activate
+4) easy_install pip
+5) pip install -U -r project/requirements.txt
+6) Install nginx 0.8.x and uwsgi
+7) Configure your nginx host to pass requests to uWSGI socket as described
    here: http://projects.unbit.it/uwsgi/wiki/RunOnNginx
-5) make uwsgi
+8) make uwsgi
 
-Here is more verbose example of what step 5 does:
+Here is more verbose example of what step 8 does:
 $ uwsgi -processes 4 --socket /tmp/project.sock --home ./env --uid www-data \
         --module project.wsgi.production --pythonpath ./project
 
