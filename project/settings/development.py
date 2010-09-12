@@ -12,3 +12,14 @@ DATABASES = {
 }
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+INSTALLED_APPS.append('devserver')
+MIDDLEWARE_CLASSES.append('devserver.middleware.DevServerMiddleware')
+
+DEVSERVER_MODULES = (
+    'devserver.modules.sql.SQLRealTimeModule',
+    'devserver.modules.sql.SQLSummaryModule',
+    'devserver.modules.profile.ProfileSummaryModule',
+    'devserver.modules.ajax.AjaxDumpModule',
+    'devserver.modules.cache.CacheSummaryModule',
+)
