@@ -5,6 +5,7 @@ Core ideas:
  * Settings module with settings for each setup. No more settings_local!
  * Simple Makefile for routine tasks.
  * Base template with suggested block names.
+ * Different requirements for development and production/staging installations.
  * Easy uWSGI setup.
  * Set of useful settings and third-party apps for development install
 
