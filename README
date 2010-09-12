@@ -6,6 +6,6 @@ Core ideas:
  * Simple Makefile for routine tasks.
  * Base template with suggested block names.
  * Easy uWSGI setup.
- * Set of useful settings for development install
+ * Set of useful settings and third-party apps for development install
 
 Read INSTALL for more detailed documentation
